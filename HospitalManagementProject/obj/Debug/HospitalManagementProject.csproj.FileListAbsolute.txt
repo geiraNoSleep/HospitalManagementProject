@@ -1,0 +1,12 @@
+H:\HospitalManagementProject\HospitalManagementProject\bin\Debug\HospitalManagementProject.exe.config
+H:\HospitalManagementProject\HospitalManagementProject\bin\Debug\HospitalManagementProject.exe
+H:\HospitalManagementProject\HospitalManagementProject\bin\Debug\HospitalManagementProject.pdb
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\HospitalManagementProject.csproj.AssemblyReference.cache
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\HospitalManagementProject.csproj.SuggestedBindingRedirects.cache
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\App.g.cs
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\HospitalManagementProject_MarkupCompile.cache
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\HospitalManagementProject.Properties.Resources.resources
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\HospitalManagementProject.csproj.GenerateResource.cache
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\HospitalManagementProject.csproj.CoreCompileInputs.cache
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\HospitalManagementProject.exe
+H:\HospitalManagementProject\HospitalManagementProject\obj\Debug\HospitalManagementProject.pdb
