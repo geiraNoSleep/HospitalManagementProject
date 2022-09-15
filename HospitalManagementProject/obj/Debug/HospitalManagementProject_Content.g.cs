@@ -10,5 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hospitalmanagementdb.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hospitalmanagementdb_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hospitalmanagementmodels.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hospitalmanagementmodels.tt")]
 
 
