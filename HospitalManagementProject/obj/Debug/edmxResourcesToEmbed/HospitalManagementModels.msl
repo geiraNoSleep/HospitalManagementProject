@@ -2,12 +2,12 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="HospitalManagementDBModelStoreContainer" CdmEntityContainer="HospitalManagementDBEntities">
     <EntitySetMapping Name="Doctors">
-      <EntityTypeMapping TypeName="HospitalManagementDBModel.Doctor">
+      <EntityTypeMapping TypeName="HospitalManagementDBModel.Doctors">
         <MappingFragment StoreEntitySet="Doctors">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
-          <ScalarProperty Name="Specialisation" ColumnName="Specialisation" />
+          <ScalarProperty Name="Specialization" ColumnName="Specialization" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

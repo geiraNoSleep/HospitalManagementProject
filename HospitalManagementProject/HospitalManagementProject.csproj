@@ -82,15 +82,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="HMS_WPF_1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Doctor.cs">
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Doctors.cs">
       <DependentUpon>HospitalManagementModels.tt</DependentUpon>
     </Compile>
     <Compile Include="HMS_WPF_1.xaml.cs">
@@ -111,8 +109,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalManagementModels.edmx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -148,10 +144,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HospitalManagementDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="HospitalManagementDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>HospitalManagementDB.mdf</DependentUpon>
     </Content>
     <Content Include="HospitalManagementModels.Context.tt">
@@ -179,6 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="HMS_WPF_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

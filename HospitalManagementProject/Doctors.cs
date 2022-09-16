@@ -12,11 +12,11 @@ namespace HospitalManagementProject
     using System;
     using System.Collections.Generic;
     
-    public partial class Doctor
+    public partial class Doctors
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public string Specialisation { get; set; }
+        public string Specialization { get; set; }
     }
 }

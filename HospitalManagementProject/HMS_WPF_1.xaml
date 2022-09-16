@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="HMS_WPF_1" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="gridDoctors" Margin="10,10,10,238"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="773*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="gridDoctors" Margin="10,238,10,10" Grid.ColumnSpan="2"/>
+        <Label Content="Name: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="76,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Surname: " HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Content="Specialization: " HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtSurname" Grid.Column="1" HorizontalAlignment="Left" Margin="76,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtSpecialization" Grid.Column="1" HorizontalAlignment="Left" Margin="76,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="addButton" Grid.Column="1" Content="Add" HorizontalAlignment="Left" Margin="136,89,0,0" VerticalAlignment="Top" Width="60" Click="addButton_Click"/>
+        <Button x:Name="refreshButton" Content="Refresh" HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="100" Click="refreshButton_Click"/>
     </Grid>
 </Window>

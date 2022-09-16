@@ -7,7 +7,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="50" />
     <Property Name="Surname" Type="varchar" MaxLength="50" />
-    <Property Name="Specialisation" Type="varchar" MaxLength="50" />
+    <Property Name="Specialization" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="HospitalManagementDBModelStoreContainer">
     <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />

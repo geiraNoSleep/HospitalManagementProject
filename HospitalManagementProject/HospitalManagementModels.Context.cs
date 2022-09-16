@@ -25,6 +25,6 @@ namespace HospitalManagementProject
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Doctor> Doctors { get; set; }
+        public virtual DbSet<Doctors> Doctors { get; set; }
     }
 }

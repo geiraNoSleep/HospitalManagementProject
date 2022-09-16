@@ -28,17 +28,32 @@ namespace HospitalManagementProject
                           {
                               Name = d.Name,
                               Surname = d.Surname,
-                              Specialisation = d.Specialisation
+                              Specialization = d.Specialization
                           };
 
-            foreach (var doctor in doctors)
-            {
-                Console.WriteLine(doctor.Name);
-                Console.WriteLine(doctor.Surname);
-                Console.WriteLine(doctor.Specialisation);
-            }
-
             this.gridDoctors.ItemsSource = doctors.ToList();
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            HospitalManagementDBEntities db = new HospitalManagementDBEntities();
+
+            Doctors doctorObject = new Doctors()
+            {
+                Name = txtName.Text,
+                Surname = txtSurname.Text,
+                Specialization = txtSpecialization.Text
+            };
+
+            db.Doctors.Add(doctorObject);
+            db.SaveChanges();
+        }
+
+        private void refreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            HospitalManagementDBEntities db = new HospitalManagementDBEntities();
+
+            this.gridDoctors.ItemsSource = db.Doctors.ToList();
         }
     }
 }
