@@ -11,7 +11,7 @@
             <ColumnDefinition Width="27*"/>
             <ColumnDefinition Width="773*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="gridDoctors" Margin="10,238,10,10" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="gridDoctors" Margin="10,238,386,10" Grid.ColumnSpan="2" SelectionChanged="gridDoctors_SelectionChanged"/>
         <Label Content="Name: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="76,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <Label Content="Surname: " HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
@@ -20,5 +20,13 @@
         <TextBox x:Name="txtSpecialization" Grid.Column="1" HorizontalAlignment="Left" Margin="76,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="addButton" Grid.Column="1" Content="Add" HorizontalAlignment="Left" Margin="136,89,0,0" VerticalAlignment="Top" Width="60" Click="addButton_Click"/>
         <Button x:Name="refreshButton" Content="Refresh" HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="100" Click="refreshButton_Click"/>
+        <Button x:Name="updateButton" Content="Update" HorizontalAlignment="Left" Margin="626,327,0,0" VerticalAlignment="Top" Width="100" Click="updateButton_Click" Grid.Column="1"/>
+        <Label Content="Name: " HorizontalAlignment="Left" Margin="513,244,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtName2" HorizontalAlignment="Left" Margin="606,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Surname: " HorizontalAlignment="Left" Margin="513,270,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Specialization: " HorizontalAlignment="Left" Margin="513,296,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtSurname2" Grid.Column="1" HorizontalAlignment="Left" Margin="606,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtSpecialization2" Grid.Column="1" HorizontalAlignment="Left" Margin="606,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="removeButton" Content="Remove" HorizontalAlignment="Left" Margin="392,404,0,0" VerticalAlignment="Top" Width="100" Click="removeButton_Click" Grid.Column="1"/>
     </Grid>
 </Window>

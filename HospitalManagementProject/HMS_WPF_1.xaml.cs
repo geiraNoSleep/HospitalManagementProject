@@ -55,5 +55,65 @@ namespace HospitalManagementProject
 
             this.gridDoctors.ItemsSource = db.Doctors.ToList();
         }
+
+        private int updatingDoctorID = 0;
+        private void gridDoctors_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.gridDoctors.SelectedIndex >= 0)
+            {
+                if (this.gridDoctors.SelectedItems.Count >= 0)
+                {
+                    if (this.gridDoctors.SelectedItems[0].GetType() == typeof(Doctors))
+                    {
+                        Doctors d = (Doctors)this.gridDoctors.SelectedItems[0];
+                        this.txtName2.Text = d.Name;
+                        this.txtSurname2.Text = d.Surname;
+                        this.txtSpecialization2.Text = d.Specialization;
+                        
+                        this.updatingDoctorID = d.Id;
+                    }
+                }
+            }
+        }
+
+        private void updateButton_Click(object sender, RoutedEventArgs e)
+        {
+            HospitalManagementDBEntities db = new HospitalManagementDBEntities();
+
+            var x = from d in db.Doctors
+                    where d.Id == this.updatingDoctorID
+                    select d;
+
+            Doctors obj = x.SingleOrDefault();
+
+            if (obj != null)
+            {
+                obj.Name = this.txtName2.Text;
+                obj.Surname = this.txtSurname2.Text;
+                obj.Specialization = this.txtSpecialization2.Text;
+
+                db.SaveChanges();
+            }
+
+        }
+
+        private void removeButton_Click(object sender, RoutedEventArgs e)
+        {
+            HospitalManagementDBEntities db = new HospitalManagementDBEntities();
+
+            var x = from d in db.Doctors
+                    where d.Id == this.updatingDoctorID
+                    select d;
+
+            Doctors obj = x.SingleOrDefault();
+
+            if (obj != null)
+            {
+                db.Doctors.Remove(obj);
+                db.SaveChanges();
+            }
+
+
+        }
     }
 }
